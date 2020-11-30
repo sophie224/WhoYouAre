@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Who You Are</title>
+</head>
+<body>
+    <!-- sidebar  start -->
+    <div class="sidenav-main-container">
+        <div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5" id="mySidebar">
+            <div class="chapters activeChapter">
+                <h6>Chapter 1</h6>
+                <a href="">Introduction</a>
+            </div>
+            <br>
+            <div  class="chapters">
+                <h6>Chapter 2</h6>
+                <a href="">Stages of sleep</a>
+            </div>
+            <br>
+            <div class="chapters">
+                <h6>Chapter 3</h6>
+                <a href=""></a>Interview</a>
+            </div>
+            <br>
+            <div class="chapters">
+                <h6>Chapter 4</h6>
+                <a href="">Circadian rhythm</a>
+            </div>
+            <br>
+            <div class="chapters">
+                <h6>Chapter 5</h6>
+                <a href="">Effects of lack of sleep</a>
+            </div>
+            <br>
+            <div class="chapters">
+                <a href="">Credits</a>
+            </div>
+
+            
+        </div>
+    
+        <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+    
+        <button class="w3-xxlarge" onclick="w3_open()">&#9776;</button>
+    </div>
+    <!-- sidebar  end -->
+</body>
+<script>
+    function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+        console.log("mySidebar");
+    }   
+
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+    }
+
+</script>
+</html>

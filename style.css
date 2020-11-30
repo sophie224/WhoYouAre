@@ -1,0 +1,53 @@
+html {
+    scroll-behavior: smooth;
+}
+*:focus{
+    outline:none;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.w3-sidebar{
+    background-color: #1C1B1A!important ;
+    color: white !important;
+    width: 300px !important;
+    padding: 70px 0 0 40px;
+    font-size: 20px;
+}
+.w3-sidebar div{
+    font-family: 'Roboto Light';
+    color:#999999;
+    font-weight: bold;
+}
+.w3-xxlarge{
+    position: absolute;
+    top: 62px;
+    z-index: 1;
+    border: none;
+    background: transparent;
+    left: 67px;
+    cursor: pointer;
+}
+#mySidebar{
+    font-family: 'Playfair Display';
+}
+
+.sidenav-main-container{
+    position: fixed;
+    z-index: 1;
+    height: 1%;
+    width: 1%;
+}
+.intro-section-first-container{
+    position: relative;
+    background-image: url(./assets/images/whitebackground.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
