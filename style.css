@@ -8,8 +8,42 @@ body{
     margin: 0;
     padding: 0;
 }
+p{
+    margin: 0;
+}
+.title{
+    font-size: 2vw;
+    font-weight: bold;
+}
+.text{
+    font-size: 1.3vw;
+}
+@font-face {
+    font-family: 'popins-black';
+    src: url('./assets/fonts/POPPINS-BLACK.TTF') format('TTF2'),
+        url('POPPINS-BLACK.TTF') format('TTF');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'popins-black-bold';
+    src: url('./assets/fonts/POPPINS-BOLD.TTF') format('TTF2'),
+        url('POPPINS-BOLD.TTF') format('TTF');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'popins-black-extrabold';
+    src: url('./assets/fonts/POPPINS-EXTRABOLD.TTF') format('TTF2'),
+        url('POPPINS-EXTRABOLD.TTF') format('TTF');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 .w3-sidebar{
-    background-color: #1C1B1A!important ;
+    background-color: #964821!important ;
     color: white !important;
     width: 300px !important;
     padding: 70px 0 0 40px;
@@ -17,7 +51,7 @@ body{
 }
 .w3-sidebar div{
     font-family: 'Roboto Light';
-    color:#999999;
+    color:white;
     font-weight: bold;
 }
 .w3-xxlarge{
@@ -26,8 +60,9 @@ body{
     z-index: 1;
     border: none;
     background: transparent;
-    left: 67px;
+    left: 40px;
     cursor: pointer;
+    color: #c14303;
 }
 #mySidebar{
     font-family: 'Playfair Display';
@@ -51,3 +86,236 @@ body{
 a{
     text-decoration: none;
 }
+/* end side navbar*/
+
+.intro-section{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#myVideo{
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+.intro-gradient{
+    right: 10%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+}
+.intro-gradient img{
+    width: 100%;
+    height: 100%;
+}
+.intro-title,.scroll-down{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+}
+.intro-title p{
+    font-size: 5rem;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+
+}
+.scroll-down{
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.intro-title p{
+    font-family: 'popins-black-extrabold',sans-serif;
+    font-weight: bold;
+}
+.intro-title p,.scroll-down p{
+    color: white;
+}
+.scroll-down p{
+    font-family: 'popins-black',sans-serif;
+    font-size: 1.2rem;
+}
+.scroll-down p:nth-child(2){
+    padding-bottom: 2%;
+}
+
+
+.section_background{
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+.background_number1{
+    background-image: url(./assets/img/background1.png);
+}
+.background_number2,
+.background_number3,
+.section_number4,
+.section_number5,
+.section_number6,
+.section_number7,
+.section_number8,
+.section_number9,
+.section_number10{
+    background-image: url(./assets/img/background2.png);
+}
+.section_number1 .left-container  .title {
+    padding-left: 20%;
+}
+.info-common-container{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 62px;
+}
+.left-container {
+    width: 50%;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+.right-container{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.section_number2 > div > div > div{
+    flex-direction: column;
+}  
+.section_number2 > div > div {
+    padding-left: 10%;
+    justify-content: start;
+}  
+.section_number3 > div > div .left-container,
+.section_number4 > div > div .left-container,
+.section_number5 > div > div .left-container,
+.section_number6 > div > div .left-container,
+.section_number7 > div > div .left-container,
+.section_number9 > div > div .left-container{
+    padding-left: 10%;
+}
+.section_number4 > div > div .left-container,
+.section_number5 > div > div .left-container,
+.section_number6 > div > div .left-container,
+.section_number7 > div > div .left-container{
+    width: 100%;
+}
+.section_number1 > div > div .right-container,
+.section_number3 > div > div .right-container,
+.section_number9 > div > div .right-container{
+    justify-content: end;
+    align-items: end;
+    padding-left: 11%;
+}
+.section_number5-common-texts{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 7%;
+}
+.section_number5-common-texts div{
+    width: 50%;
+}
+
+.statistic-common-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.statistic-common-container div:nth-child(1){
+    width:30%;
+    padding-left: 3.5%;
+}
+.statistic-common-container div:nth-child(2){
+    width:70%;
+}
+.credits-common-container{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 15%;
+}
+
+
+
+
+
+
+
+
+/* .second-section,
+.forth-section,
+.sixth-section,
+.seventh-section,
+.eighth-section{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.forth-section-background,
+.second-section-background,
+.sixth-section-background,
+.seventh-section-background,
+.eighth-section-background{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    color: black;
+}
+.second-section-background{
+    background-image: url(./assets/img/background1.png);
+}
+.forth-section-background{
+    background-image: url(./assets/img/background2.png);
+}
+.sixth-section-background{
+    background-image: url(./assets/img/background3.png);
+}
+.seventh-section-background,.eighth-section-background{
+    background-image: url(./assets/img/background4.png);
+}
+.left-text-side,.right-text-side,.text-container{
+    position: absolute;
+    top: 7%;
+}
+.left-text-side,.text-container{
+    font-size: 2vw;
+    left: 12%;
+}
+.left-text-side p,.title{
+    font-family: 'popins-black-extrabold',sans-serif;
+    font-weight: bold;
+}
+.right-text-side{
+    display: flex;
+    flex-direction: column;
+    right: 12%;
+}
+
+
+.right{
+    left: 45%;
+}
+.text-common-container{
+    display: flex;
+} */
