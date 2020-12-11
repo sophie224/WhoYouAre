@@ -12,7 +12,7 @@ p{
     margin: 0;
 }
 .title{
-    font-size: 2vw;
+    font-size: 1.5vw;
     font-weight: bold;
 }
 .text{
@@ -52,7 +52,6 @@ p{
 .w3-sidebar div{
     font-family: 'Roboto Light';
     color:white;
-    font-weight: bold;
 }
 .w3-xxlarge{
     position: absolute;
@@ -183,6 +182,12 @@ a{
     justify-content: space-evenly;
     padding-top: 62px;
 }
+.background_number3 .info-common-container{
+    width: 60%;
+}
+.background_number3 .left-container{
+    width: 53%;
+}
 .left-container {
     width: 50%;
     display: flex;
@@ -258,14 +263,30 @@ a{
 
 .children-on-road{
     position: absolute;
-    width: 46%;
-    top: 0;
+    width: 60.6%;
+    bottom: 0;
 }
 img{
     width: 100%;
     height: 100%;
 }
-
+.children-on-road2{
+    position: absolute;
+    width: 50%;
+    bottom: 0;
+    right: 0;
+}
+.children-on-road3{
+    position: absolute;
+    width: 80%;
+    right: 0;
+    bottom: -9%;
+}
+.children-on-road4{
+    position: absolute;
+    bottom: 0;
+    width: 70%;
+}
 /* .children-on-road{
     background-image: url(./assets/img/c1.png);
     background-position: center;
