@@ -18,6 +18,16 @@ p{
 .text{
     font-size: 1.3vw;
 }
+.w3-sidebar::-webkit-scrollbar {
+    width: 0.3em;
+}
+.w3-sidebar::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(219, 88, 44,1);
+}
+.w3-sidebar::-webkit-scrollbar-thumb {
+  background-color:  rgba(219, 88, 44,1);
+  outline: 1px solid  rgba(219, 88, 44,1);
+}
 @font-face {
     font-family: 'popins-black';
     src: url('./assets/fonts/POPPINS-BLACK.TTF') format('TTF2'),
@@ -43,10 +53,11 @@ p{
     font-display: swap;
 }
 .w3-sidebar{
-    background-color: #964821!important ;
+    font-family: 'popins-black',sans-serif;
+    background-color: #964821!important;
     color: white !important;
-    width: 300px !important;
-    padding: 70px 0 0 40px;
+    width: 230px !important;
+    padding: 5%;
     font-size: 20px;
 }
 .w3-sidebar div{
@@ -232,7 +243,7 @@ a{
 .section_number5-common-texts{
     display: flex;
     justify-content: space-between;
-    padding-top: 7%;
+    padding-top: 3%;
 }
 .section_number5-common-texts div{
     width: 50%;
@@ -243,14 +254,23 @@ a{
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
-.statistic-common-container div:nth-child(1){
-    width:30%;
-    padding-left: 3.5%;
+.charts-title{
+    position: absolute;
+    left: 11%;
 }
-.statistic-common-container div:nth-child(2){
-    width:70%;
+.charts-title p{
+    font-size: 2vw;
+}
+.statistic_container{
+    width: 55%;
+    position: absolute;
+    right: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 .credits-common-container{
     display: flex;
@@ -263,7 +283,7 @@ a{
 
 .children-on-road{
     position: absolute;
-    width: 60.6%;
+    width: 50%;
     bottom: 0;
 }
 img{
@@ -287,6 +307,185 @@ img{
     bottom: 0;
     width: 70%;
 }
+
+
+
+/*player*/
+
+.video-player .controls .progress {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.progress{
+    margin-left: 3%;
+}
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.video-player{
+    width: 80%;
+    display: flex;
+}
+.video-player .play {
+    /* position: absolute; */
+    /* top: -30px; */
+    background: transparent;
+    box-sizing: border-box;
+    width: 0;
+    height: 10px;
+    /* margin-left: 15px; */
+    border-color: transparent transparent transparent black;
+    transition: 250ms all ease;
+    cursor: pointer;
+    border-style: solid;
+    /* border-width: 12px 0 12px 20px; */
+    border-width: 5px 0 5px 11px;
+}
+.video-player .paused {
+    border-style: double;
+    border-width: 0 0 0 11px;
+}
+.video-player .controls {
+    width: 100%;
+}
+.video-player .controls .progress {
+    /* display: inline-block; */
+    cursor: pointer;
+    height: 2px;
+    position: relative;
+    width: 60%;
+    background-color: transparent;
+    vertical-align: bottom;
+    background-color: #afafaf;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+.video-player .controls .progress .track {
+    background-color: black;
+    position: absolute;
+    /* top: 0; */
+    left: 0;
+    height: 100%; 
+    width: 0;
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -ms-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear;
+}
+
+.video-player .controls .progress .track:after {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    right: -5px;
+    top: -2px;
+    background: black;
+    border-radius: 100%;
+}
+
+.video-player .controls .progress {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body .background .overlay .main-content .sound-timing .timing, .read-more {
+    display: inline-block;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    position: absolute;
+    bottom: -55px;
+    left: -26px;
+}
+body .background .overlay .main-content .sound-timing .timing span {
+    font-family: "BPG Nino Mkhedruli Book", sans-serif;
+    font-size: 1.5em;
+    color: #9E7978;
+    width: 50px;
+    display: inline-block;
+}
+
+.main-content{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin-top: 15%;
+}
+.back, .forward{
+    width: 20px;
+    height: 16px;
+}
+.back img, .forward img{
+    width: 100%;
+}
+.pause_play_button_container{
+    display: flex;
+    padding-left: 8%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 0 15%;
+    width: 20px;
+}
+.sound_line{
+    background-color: gray;
+    width: 3px;
+}
+.active{
+    background-color:black;
+}
+.sound-button {
+    display: flex;
+    align-items: flex-end;
+}
+.first_line{
+    margin: 0 1px;
+    height: 8px;
+}
+.second_line{
+    margin: 0 1px;
+    height: 10px;
+}
+.third_line{
+    margin: 0 1px;
+    height: 12px;
+}
+.forth_line{
+    margin: 0 1px;
+    height: 14px;
+}
+
+.sound_line.active {
+    opacity:1;
+}
+.left-side-control{
+    display: flex;
+    line-height: 0.5;
+}
+.sound-timing{
+    margin-left: 15px;
+}
+
+
+
+/*player end*/
+
+#myChart{
+    width:100% !important;
+    height: 100vh !important;
+}
+
+
+
+
 /* .children-on-road{
     background-image: url(./assets/img/c1.png);
     background-position: center;

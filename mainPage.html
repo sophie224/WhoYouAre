@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Who You Are</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
 </head>
 <body>
     <!-- sidebar  start -->
@@ -49,11 +52,19 @@
             </div>
             <br>
             <div class="chapters">
-                <a href="3chapter10">chapter 10</a>
+                <a href="#chapter10">chapter 10</a>
             </div>
             <br>
             <div class="chapters">
-                <a href="3chapter11">chapter 11</a>
+                <a href="#chapter11">chapter 11</a>
+            </div>
+            <br>
+            <div class="chapters">
+                <a href="#chapter12">chapter 12</a>
+            </div>
+            <br>
+            <div class="chapters">
+                <a href="#chapter13">Credits</a>
             </div>
 
             
@@ -117,10 +128,48 @@
                         themselves. Is it a wise decision for building<br>
                         a healthy family relationship?
                     </p>
+                    <div class="main-content">
+                        <div class="video-player">
+                            <audio src="./assets/audio/audio.mp3" class="audio"  preload="metadata"></audio>
+                            <div class="controls">
+                            <div class="left-side-control">
+                                <div class="back">
+                                <img src="./assets/img/rewindBack.png" alt="">
+                                </div>
+                    
+                                <div class="pause_play_button_container">
+                                <button class="play">
+                                </button>
+                                </div>
+                    
+                                <div class="forward">
+                                <img src="./assets/img/rewindForward.png" alt="">
+                                </div>
+                            </div>
+                            
+                            <div class="progress" style="display: inline-block;">
+                                <span class="track"></span>
+                            </div>
+                    
+                            <div class="sound-timing">
+                                <div class="sound-button">
+                    
+                                <div class="sound_line first_line first"></div>
+                    
+                                <div class="sound_line second_line second"></div>
+                    
+                                <div class="sound_line third_line third"></div>
+                    
+                                <div class="sound_line forth_line forth"></div>
+                    
+                                </div>
+                            </div>
+                            
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="audio">
-
-                </div>
+               
             </div>
             <div class="children-on-road">
            
@@ -428,7 +477,7 @@
     <section class="section_number8" id="chapter11">
         <div class="section_background background_number7">
             <div class="statistic-common-container">
-                <div>
+                <div class="charts-title">
                     <p class="title">
                         The Minimum<br>
                         Age of Consent<br>
@@ -437,13 +486,13 @@
                     </p>
                 </div>
                 <div class="statistic_container">
-
+                    <canvas id="myChart" width="200" height="200"></canvas>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section_number9">
+    <section class="section_number9" id="chapter12">
         <div class="section_background background_number9">
             <div class="info-common-container">
                 <div class="left-container ">
@@ -486,7 +535,7 @@
     </section>
 
 
-    <section class="section_number10">
+    <section class="section_number10" id="chapter13">
         <div class="section_background background_number10">
             <div class="credits-common-container">
                 <div>
@@ -509,6 +558,8 @@
         </div>
     </section>
 </body>
+<script src="./assets/scripts/player.js"></script>
+<script src="./assets/scripts/chart.js"></script>
 <script>
     function w3_open() {
         document.getElementById("mySidebar").style.display = "block";
